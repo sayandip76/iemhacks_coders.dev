@@ -1,0 +1,115 @@
+@import "./../../../mixin.scss";
+
+.topBanner {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    @include md {
+        height: 550px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .topBannerContent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 0;
+        @include md{
+            max-width: 50%;
+        }
+
+        .title {
+            font-size: 50px;
+            font-weight: 700;
+            margin: 110px auto 30px;
+            color: black;
+            span{
+                color: green;
+                text-align: center;
+            }
+
+            @include md {
+                margin: 70px 0px 30px;
+                font-size: 60px;
+            }
+        }
+
+        .subTitle {
+            font-size: 18px;
+            font-family: 'Preahvihear', sans-serif;
+            color: rgb(89, 89, 89);
+            font-weight: 500;
+            margin-bottom: 45px;
+            line-height: 1.5;
+            text-align: center;
+
+            @include md {
+                font-size: 18px;
+                line-height: 1.35;
+                text-align: left;
+            }
+        }
+
+        .btn {
+            border: 2px solid black;
+            background-color: white;
+            color: black;
+            margin: 10px auto 30px;
+            padding: 16px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 30px;
+            width: 200px;
+            @include md{
+                margin: 0;
+            }
+            position: relative;
+            z-index: 1;
+        }
+
+        .green {
+            border-color: green;
+            color: green;
+            transition: 0.5s ease;
+        }
+
+        .green:hover {
+            background-color: green;
+            color: white;
+        }
+    }
+
+    .side-img{
+        width: 100%;
+        height: 400px;
+        @include md{
+            min-width: 50%;
+            margin-top: 90px;
+            
+        }
+        position: relative;
+    }
+
+}
+.opacity-layer {
+    width: 100%;
+    height: 100px;
+    @include md {
+        height: 50px;
+    }
+    background: linear-gradient(180deg,
+            rgba(135, 249, 146, 0) 0%,
+            rgb(207, 251, 214) 100%);
+    position: relative;
+    bottom: 0;
+    left: 0;
+}

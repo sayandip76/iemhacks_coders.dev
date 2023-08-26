@@ -1,0 +1,157 @@
+@import "../../mixin.scss";
+.header {
+    position: fixed;
+    transform: translateY(0);
+    width: 100%;
+    height: 70px;
+    @include md {
+        height: 80px;
+    }
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all ease 0.5s;
+    z-index: 2;
+    &.show {
+        background-color: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08) ;        
+    }
+    &.hide {
+        transform: translateY(-60px);
+    }
+    // .contentWrapper {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
+    // }
+    .logo {
+        cursor: pointer;
+        @media only screen and (max-width:768px){
+            margin: auto;
+        }
+        img {
+            height: 35px;            
+            @include md {
+                margin: auto 30px;
+                height: 40px;
+            }
+        }
+    }
+    .menuItems {
+        list-style-type: none;
+        display: none;
+        align-items: center;
+        @include md {
+            display: flex;
+            margin: auto;
+        }
+        .menuItem {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            margin: 0 15px;
+            color: green;
+            font-weight: 500;
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            transition: 0.4s ease;
+            svg {
+                font-size: 18px;
+            }
+            cursor: pointer;
+            &:hover {
+                color: darkslategray;
+                font-size: 20px;
+            }
+        }
+    }
+    .login{
+        display: flex;
+        align-items: center;
+    }
+    .btn {
+        display: none;
+        @include md {
+            display: inline;
+            border: 2px solid black;
+            background-color: white;
+            color: black;
+            // padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 30px;
+            width: 100px;
+            position: relative;
+            z-index: 2;
+            margin: auto 20px;
+            
+        }
+    }
+    .logout{
+        padding: 18px;
+    }
+    .create{
+        padding: 10px;
+    }
+    .green {
+        border-color: green;
+        color: green;
+        transition: 0.5s ease;
+    }
+    .green:hover {
+        background-color: green;
+        color: white;
+    }
+ 
+    .mobileMenuItems {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin: 30px;
+        @include md {
+            display: none;
+        }
+        svg {
+            font-size: 18px;
+            color: green;
+        }
+    }
+    &.mobileView {
+        background: white;
+        .menuItems {
+            display: flex;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background: white;
+            flex-direction: column;
+            width: 100%;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            animation: mobileMenu 0.3s ease forwards;
+            .menuItem {
+                font-size: 20px;
+                width: 100%;
+                height: auto;
+                padding: 15px 20px;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                // &:last-child {
+                //     display: none;
+                // }
+            }
+        }
+    }
+}
+@keyframes mobileMenu {
+    0% {
+        transform: translateY(-130%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,178 @@
+@import "./../../mixin.scss";
+
+.footer {
+    background-color: rgb(14, 29, 70);
+
+    .contents {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        padding: 50px 0;
+
+        .menuItem {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 2.2;
+            width: 150px;
+            margin-bottom: 50px;
+
+            @include md {
+                width: auto;
+                margin-bottom: 0;
+            }
+
+            h4 {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .connect {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .newsletter {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+
+            @include lg {
+                align-items: flex-start;
+                margin-left: 0;
+            }
+
+            padding: 0 0 50px;
+
+            h4 {
+                color: white;
+                font-size: 28px;
+                margin: 20px 0;
+            }
+
+            p {
+                color: white;
+                font-size: 18px;
+                color: rgb(184, 184, 184);
+                margin: 0 0 30px;
+            }
+
+            .container {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include md{
+                    justify-content: space-between;
+                }
+
+                .content {
+                  width: 90%;
+                  height: 50px;
+                  border-radius: 60px;
+                  overflow: hidden;
+
+                  .subscription {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    
+                    .add-email{
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      border: none;
+                      outline: none;
+                      padding: 0 20px;
+                      font-size: 16px;
+                    }
+    
+                    .submit-email {
+                      position: absolute;
+                      top: 0;
+                      right: 0;
+                      height: calc(100% - 2px);
+                      width: 30%;
+                      min-width: 100px;
+                      border: none;
+                      border-radius: 60px;
+                      outline: none;
+                      margin: 1px;
+                      padding: 0 20px;
+                      cursor: pointer;
+                      background: var(--gradient);
+                      color: var(--black);
+                      font-size: 16px;
+                    }
+                  }
+                }
+            }
+        }
+
+        .social {
+            position: relative;
+            max-width: 30%;
+            padding: 0 0 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+
+            @include lg {
+                margin-right: 0;
+            }
+
+            h4 {
+                color: white;
+                font-size: 20px;
+                margin: 0 0 20px;
+                text-align: center;
+            }
+
+            .socialIcons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                :visited {
+                    color: white;
+                }
+
+                .icon {
+                    color: white;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-color: var(--black);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: all ease 0.3s;
+
+                    &:hover {
+                        box-shadow: 0 0 0.625em rgb(111, 249, 111);
+                        color: rgb(111, 249, 111);
+                    }
+                }
+            }
+        }
+    }
+}
