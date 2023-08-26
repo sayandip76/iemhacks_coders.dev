@@ -14,7 +14,7 @@ const RecycledProduct = () => {
           <span>Recycled</span> Products
         </div>
         <div className="products">
-            <div className='py-10 flex overflow-x-auto space-x-8 w-full  overflow-y-visible'>
+            <div className='py-2 flex overflow-x-auto space-x-8 w-full  overflow-y-visible'>
               {
                 array.map((obj,id)=>(
                   <Product description="Image of the Product Image"  key={id}/>

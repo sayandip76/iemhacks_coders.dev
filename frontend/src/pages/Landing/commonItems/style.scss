@@ -1,12 +1,12 @@
 @import "../../../mixin.scss";
 
 .common-items {
-    background-color: rgb(207, 251, 214);
-    height: 380px;
-    padding-top: 40px;
+   //background-color: rgb(207, 251, 214);
+    height: 400px;
+    padding-top: 60px;
     @include md{
-        padding-top: 50px;
-        height: 450px;
+        padding-top: 100px;
+        height: 530px;
     }
 
     .contentWrapper {
@@ -21,8 +21,10 @@
         span {
             color: green;
         }
-
         margin-bottom: 30px;
+        @include md{
+            margin-bottom: 70px;
+        }
         font-weight: 700;
     }
 
@@ -44,7 +46,7 @@
         .item {
             width: 125px;
             cursor: pointer;
-            background-color: rgb(199, 250, 241);
+            
 
             @include md {
                 width: calc(25% - 15px);
@@ -57,7 +59,7 @@
             }
 
             flex-shrink: 0;
-            border: 1px solid grey;
+            border: 3px solid green;
             border-radius: 10px;
 
             .item-img {
