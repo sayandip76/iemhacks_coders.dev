@@ -1,6 +1,6 @@
-# Renewap
+# Trash2Gem
 [<img src="https://media.licdn.com/dms/image/D5612AQH563oGaHxWnA/article-cover_image-shrink_720_1280/0/1662639240494?e=2147483647&v=beta&t=OiJmVQJ-8tJDD-9m-2tkuGmJunA5ycmbyy4NNdjOq1w" width="1024" height="400">](https://github.com/sayandip76/iemhacks_coders.dev/)
-Renewap is a platform designed to bridge the gap between waste materials generated daily and skilled artisans capable of transforming these waste materials into upcycled and repurposed products. The platform offers a centralized marketplace where scrap yard owners can provide tailored waste materials to artisans, facilitating a secure and efficient procurement process. Additionally, Renewap serves as an ecommerce hub, allowing artisans to showcase and sell their innovative recycled creations.
+Trash2Gem is a platform designed to bridge the gap between waste materials generated daily and skilled artisans capable of transforming these waste materials into upcycled and repurposed products. The platform offers a centralized marketplace where scrap yard owners can provide tailored waste materials to artisans, facilitating a secure and efficient procurement process. Additionally, Trash2Gem serves as an ecommerce hub, allowing artisans to showcase and sell their innovative recycled creations.
 
 ## Problem Statement
 
@@ -8,12 +8,12 @@ Millions of tons of household waste are generated daily, often collected by loca
 
 ## Solution Overview
 
-"Renewap" aims to address this problem by providing a unified platform that connects scrap yard owners and artisans:
+"Trash2Gem" aims to address this problem by providing a unified platform that connects scrap yard owners and artisans:
 
 - **Materials Procurement:** Scrap yard owners can list waste materials on the platform, tailoring their offerings to the specific needs and requirements of artisans.
 - **Secure Transactions:** The platform ensures secure transactions and a streamlined delivery process, facilitating the procurement of materials.
 - **Artisan Showcase:** Artisans can register as sellers on the platform, presenting their innovative upcycled and repurposed products to a wider audience.
-- **Ecommerce Marketplace:** Renewap serves as an ecommerce marketplace, enabling artisans to exhibit and sell their creations directly to interested buyers.
+- **Ecommerce Marketplace:** Trash2Gem serves as an ecommerce marketplace, enabling artisans to exhibit and sell their creations directly to interested buyers.
 
 ## Technologies Used
 
