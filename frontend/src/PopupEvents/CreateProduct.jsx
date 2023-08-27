@@ -23,10 +23,10 @@ const CreateProduct = ({setCreateProduct}) => {
         e.preventDefault();
       
 
-       const promise = await storage.createFile(process.env.REACT_APP_APPWRITE_BUCKET, uuidv4(), profileImage);
+       const promise = await storage.createFile('64d7a62faef4f19b4ed7', uuidv4(), profileImage);
 
        console.log(promise);
-       const getFile = await storage.getFilePreview(process.env.REACT_APP_APPWRITE_BUCKET, promise.$id);
+       const getFile = await storage.getFilePreview('64d7a62faef4f19b4ed7', promise.$id);
        console.log(getFile);
        const create=await axios.put('http://localhost:8080/community/createProduct',{description:product.description,price:product.price,image:getFile.href,owner:product.owner},{ withCredentials: true });
        console.log(create);

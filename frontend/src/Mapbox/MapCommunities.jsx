@@ -20,10 +20,11 @@ import {useControl} from "react-map-gl";
 
 import "mapbox-gl/dist/mapbox-gl.css";
 import * as parkDate from "./data.json";
+import Pin from './pin.png';
 
 
 
-function CommunityMap({showDataList = true,style, width = '70vw', height='60vh'}) {
+function CommunityMap({showDataList = true,style, width = '50vw', height='60vh'}) {
   const [popupInfo, setPopupInfo] = useState(null);
   const [communities,setCommunities]=useState();
   const [viewPort, setViewPort] = useState({
@@ -91,7 +92,7 @@ function CommunityMap({showDataList = true,style, width = '70vw', height='60vh'}
               className="marker-btn"
               
             >
-              <img src={Icon} alt="Skate Park Icon" />
+              <img src={Pin} width={30} alt="Skate Park Icon" />
             </button>
             </Marker>
         ))}

@@ -10,6 +10,7 @@ import Communities from './pages/Communities/Communities'
 //import AddItem from '../PopupEvents/AddItem';
 import Finalpage from './components/communityProfile/Finalpage';
 import CollectorProfile from './components/collectorProfile/Profile';
+import ProductPage from './pages/CartPage/ProductPage';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
        <Route path="/communities" element={<Communities/>}/>
        <Route path="/collectorProfile" element={<CollectorProfile/>}/>
        <Route path="/communityProfile" element={<Finalpage/>}/>
+       <Route path="/cartPage" element={<ProductPage/>}/>
     </Routes>
     <Footer/>
     </>

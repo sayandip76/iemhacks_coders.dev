@@ -14,7 +14,7 @@ const StoreWaste = ({model,id,content}) => {
   
   return (
     
-    <div className=' rounded-md p-5 w-[250px] h-[200px] m-5 group  transition-al duration-300 ease-in-out item' key={id}>
+    <div className=' rounded-md p-5 w-[250px] h-[220px] m-5 group  transition-al duration-300 ease-in-out item' key={id}>
       <div className='group-hover:opacity-0 transition-all h-full duration-300 ease-in-out item_hover'>
           <div className='h-3/4 flex flex-row justify-center items-center '>
               <Canvas>
@@ -28,7 +28,7 @@ const StoreWaste = ({model,id,content}) => {
               {content.wasteType}
           </div>
       </div>
-      <div className='group-hover:opacity-100 opacity-0 transition-all relative -translate-y-36 text-center  text-xl duration-300 ease-in-out'>
+      <div className='group-hover:opacity-100 opacity-0 transition-all relative -translate-y-44 text-center  text-xl duration-300 ease-in-out'>
 
               <p><b className='text-primary'>{content.amountPresent}kg</b></p>
               <label className=' font-mons'>Amount Received</label>
@@ -41,7 +41,7 @@ const StoreWaste = ({model,id,content}) => {
                 <button className='w-full rounded-md px-2 py-2 font-mons text-white bg-primary my-5' onClick={()=>setBuyWaste(true)}>Buy Now</button>
               )}
       </div>
-      {buyWaste && <BuyWaste setBuyWaste={setBuyWaste}/>}
+      {buyWaste && <BuyWaste setBuyWaste={setBuyWaste} wasteId={content._id}/>}
     </div>
   )
 }

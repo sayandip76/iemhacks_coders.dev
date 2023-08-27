@@ -2,24 +2,34 @@ import React,{useState} from 'react'
 import { ImCross } from 'react-icons/im';
 import { currentVisitor } from '../logic/getUser';
 import axios from 'axios';
+import { toast } from "react-hot-toast";
+
 //import PaymentGateway from './PaymentGateway';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 
 const BuyWaste =({setBuyWaste,wasteId}) => {
+
   const {visitor}=currentVisitor();
-  const stripe = useStripe();
-  const elements = useElements();
+  //const stripe = useStripe();
+  //const elements = useElements();
   const addItem=async()=>{
     
   }
   const sellAmount=async()=>{
-    /* const value=document.getElementById('wasteAmt').value;
-    const sellWaste=await axios.put("http://localhost:8080/collector/sellWaste",{wasteId:wasteId,wasteAmount:parseInt(value)},{withCredentials:true});
-    console.log(sellWaste); */
-    const result = await stripe.createPaymentMethod({
-      type: 'card',
-      card: elements.getElement(CardElement),
-    });
+    try{
+    const value=document.getElementById('wasteAmt').value;
+    const sellWaste=await axios.post("http://localhost:8080/collector/sellWaste",{wasteId:wasteId,wasteAmount:parseInt(value)},{withCredentials:true});
+
+    toast.success("Successfully Added",{position: 'top-right'})
+    setBuyWaste(false);
+    console.log(sellWaste); 
+
+    //window.location.reaload();
+   }
+    catch(err){
+
+    }
+  
   }
   
   //const [payment,setPayment]=useState(false);

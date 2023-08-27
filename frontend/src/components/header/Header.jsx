@@ -91,7 +91,6 @@ const Header = () => {
             navigate("/communities");
             setActive('Community')
           }}>Community</li>
-        
         </ul>
         <div className="login">
           {isAuthenticated?
