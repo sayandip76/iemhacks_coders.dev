@@ -23,7 +23,7 @@ const Header = () => {
   const { isLoading, isAuthenticated, error, user, getAccessTokenSilently,loginWithRedirect, loginWithPopup,logout } =
   useAuth0();
   const [createProfile,setCreateProfile]=useState(false);
- 
+  const [active, setActive] = useState('Home');
   
   const location = useLocation();
   const navigate = useNavigate();
@@ -71,10 +71,26 @@ const Header = () => {
           <img src={recycleLogo} onClick={()=>navigate("/")} />
         </div>
         <ul className="menuItems">
-          <li className="menuItem" onClick={()=>navigate("/")}>Home</li>
-          <li className="menuItem" onClick={()=>navigate("/marketplace")}>Market</li>
-          <li className="menuItem" onClick={()=>navigate("/store")}>Store</li>
-          <li className="menuItem" onClick={()=>navigate("/communities")}>Community</li>
+          <li className={`menuItem ${active === 'Home' ? "item-active" : ""}`} 
+          onClick={()=>{
+            navigate("/");
+            setActive('Home')
+          }}>Home</li>
+          <li className={`menuItem ${active === 'Market' ? "item-active" : ""}`} 
+          onClick={()=>{
+            navigate("/marketplace");
+            setActive('Market')
+          }}>Market</li>
+          <li className={`menuItem ${active === 'Store' ? "item-active" : ""}`} 
+          onClick={()=>{
+            navigate("/store");
+            setActive('Store')
+          }}>Store</li>
+          <li className={`menuItem ${active === 'Community' ? "item-active" : ""}`} 
+          onClick={()=>{
+            navigate("/communities");
+            setActive('Community')
+          }}>Community</li>
         
         </ul>
         <div className="login">

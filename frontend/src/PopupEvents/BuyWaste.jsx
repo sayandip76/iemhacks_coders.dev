@@ -2,14 +2,27 @@ import React,{useState} from 'react'
 import { ImCross } from 'react-icons/im';
 import { currentVisitor } from '../logic/getUser';
 import axios from 'axios';
-import PaymentGateway from './PaymentGateway';
+//import PaymentGateway from './PaymentGateway';
+import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 
-const BuyWaste =({setBuyWaste}) => {
+const BuyWaste =({setBuyWaste,wasteId}) => {
   const {visitor}=currentVisitor();
+  const stripe = useStripe();
+  const elements = useElements();
   const addItem=async()=>{
     
   }
-  const [payment,setPayment]=useState(false);
+  const sellAmount=async()=>{
+    /* const value=document.getElementById('wasteAmt').value;
+    const sellWaste=await axios.put("http://localhost:8080/collector/sellWaste",{wasteId:wasteId,wasteAmount:parseInt(value)},{withCredentials:true});
+    console.log(sellWaste); */
+    const result = await stripe.createPaymentMethod({
+      type: 'card',
+      card: elements.getElement(CardElement),
+    });
+  }
+  
+  //const [payment,setPayment]=useState(false);
 
   return (
     <div className='w-screen h-screen bg-black opacity-90 fixed z-30 justify-center items-center flex flex-row top-0 left-0'>
@@ -19,7 +32,7 @@ const BuyWaste =({setBuyWaste}) => {
             </div>
             <div className='px-10 pt-2 pb-5'>
                   
-                  <select className='w-full px-5 py-2'>
+                  <select className='w-full px-5 py-2' id="wasteAmt">
 
                     <option value="10">10kg</option>
                     <option value="20">20kg</option>
@@ -28,12 +41,14 @@ const BuyWaste =({setBuyWaste}) => {
                     <option value="50">50kg</option>
 
                   </select>
-                  <button className='bg-primary rounded-sm text-white px-5 py-3 w-full my-3' onClick={()=>setPayment(true)}>Buy Current Amount</button>
+                  <button className='bg-primary rounded-sm text-white px-5 py-3 w-full my-3' onClick={sellAmount}>Sell Current Amount</button>
             </div>
            
 
         </div>
-        {payment && <PaymentGateway setPayment={setPayment}/>}
+        {
+        //payment && <PaymentGateway setPayment={setPayment} wasteId={wasteId} wasteAmount={document.getElementById('wasteAmt').value}/>
+        }
     </div>
   )
 }

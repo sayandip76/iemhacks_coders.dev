@@ -11,8 +11,8 @@ import ConnectWallet from './logic/connectWallet.jsx';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Auth0Provider
-      domain="dev-h6dwfn0pny2sne5s.us.auth0.com"
-      clientId="UCdX0gYf4D1Ifgu2i1zgyoEN6KnCQM0y" redirect_uri={window.location.origin}>
+      domain={process.env.REACT_APP_AUTH_DOMAIN}
+      clientId={process.env.REACT_APP_CLIENTID} redirect_uri={window.location.origin}>
       <CheckVisitor>
         {/*<ConnectWallet>*/}
           <BrowserRouter>
