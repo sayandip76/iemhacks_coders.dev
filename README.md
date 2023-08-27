@@ -22,7 +22,6 @@ Millions of tons of household waste are generated daily, often collected by loca
 - **Database:** ![MongoDB][MongoDB] ![Appwrite][Appwrite]
 - **Authentication:** ![Auth0][Auth0]
 - **Payment Integration:** ![Blockchain][Blockchain]
-- **Hosting:** ![Godaddy][Godaddy]
 - **Version Control:** ![Gits][Gits] ![Github][Github]
 
 
