@@ -1,6 +1,6 @@
-# Trash2Gem
-[![Trash2Gem Social Banner](https://i.natgeofe.com/k/3519980b-ba58-456d-b691-2ed516c223e0/clean-it-up-textimage.jpg)](https://www.freecodecamp.org/)
-Trash2Gems is a platform designed to bridge the gap between waste materials generated daily and skilled artisans capable of transforming these waste materials into upcycled and repurposed products. The platform offers a centralized marketplace where scrap yard owners can provide tailored waste materials to artisans, facilitating a secure and efficient procurement process. Additionally, Trash2Gems serves as an ecommerce hub, allowing artisans to showcase and sell their innovative recycled creations.
+# Renewap
+[<img src="https://media.licdn.com/dms/image/D5612AQH563oGaHxWnA/article-cover_image-shrink_720_1280/0/1662639240494?e=2147483647&v=beta&t=OiJmVQJ-8tJDD-9m-2tkuGmJunA5ycmbyy4NNdjOq1w" width="1024" height="400">](https://github.com/sayandip76/iemhacks_coders.dev/)
+Renewap is a platform designed to bridge the gap between waste materials generated daily and skilled artisans capable of transforming these waste materials into upcycled and repurposed products. The platform offers a centralized marketplace where scrap yard owners can provide tailored waste materials to artisans, facilitating a secure and efficient procurement process. Additionally, Renewap serves as an ecommerce hub, allowing artisans to showcase and sell their innovative recycled creations.
 
 ## Problem Statement
 
@@ -8,12 +8,12 @@ Millions of tons of household waste are generated daily, often collected by loca
 
 ## Solution Overview
 
-"Trash2Gems" aims to address this problem by providing a unified platform that connects scrap yard owners and artisans:
+"Renewap" aims to address this problem by providing a unified platform that connects scrap yard owners and artisans:
 
 - **Materials Procurement:** Scrap yard owners can list waste materials on the platform, tailoring their offerings to the specific needs and requirements of artisans.
 - **Secure Transactions:** The platform ensures secure transactions and a streamlined delivery process, facilitating the procurement of materials.
 - **Artisan Showcase:** Artisans can register as sellers on the platform, presenting their innovative upcycled and repurposed products to a wider audience.
-- **Ecommerce Marketplace:** Trash2Gems serves as an ecommerce marketplace, enabling artisans to exhibit and sell their creations directly to interested buyers.
+- **Ecommerce Marketplace:** Renewap serves as an ecommerce marketplace, enabling artisans to exhibit and sell their creations directly to interested buyers.
 
 ## Technologies Used
 
@@ -28,11 +28,25 @@ Millions of tons of household waste are generated daily, often collected by loca
 
 ## Getting Started
 
-[Instructions for setting up and running the project locally]
+- **Clone** the repository to your local machine:<br>
+  **https://github.com/sayandip76/iemhacks_coders.dev.git**
+- Split the terminals into 3 parts and navigate to each of the following 3 directories:<br>
+  **cd frontend** <br> **cd backend** <br> **cd blockchain**
+- Then run **"npm i"** command in each of the three terminals.
+- Run command **"node index"** in the backend related terminal. It will show:<br>
+    Server Started<br>
+    Successful connection....
+- Run command **"npm run dev"** in the frontend related terminal. It will give a link:<br>
+  Local:   http://localhost:5173/ or something like this. Then, ctrl + click on this link to get to the website.
+   
+
 
 ## Usage
 
-[How to use the platform as a scrap yard owner or artisan, along with any relevant screenshots]
+- At first click on Login button on top right corner. Then sign up yourself. Once you complete signing up, create profile button appears.
+- Click on create profile button. Create your profile as a scrapyard holder or community.
+- If you are a scrapyard holder you will be able to now add waste items here. Your wastes will be collected.
+- If you are a community, you can view the store here about what types of wastes are currently available with us. You can buy wastes from there. You can also post your own created recycled products in this platform to sell it to any customer visiting here.
 
 ## Future Enhancements
 
@@ -75,9 +89,9 @@ Each of these ideas brings practical value and innovation to your platform, addr
 [Node]:https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
 [SAAS]:https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white
 [Bootstrap]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Appwrite]:https://img.shields.io/badge/Appwrite-323330?style=for-the-badge&logo=testing-library&logoColor=blue
-[Auth0]:https://img.shields.io/badge/Auth0-325460?style=for-the-badge&logo=testing-library&logoColor=green
-[Gits]:https://img.shields.io/badge/Git-FFE5B4?style=for-the-badge&logo=testing-library&logoColor=orange
-[Github]:https://img.shields.io/badge/Github-323330?style=for-the-badge&logo=testing-library&logoColor=red
-[Blockchain]:https://img.shields.io/badge/Blockchain-FF0000?style=for-the-badge&logo=testing-library&logoColor=green
-[Godaddy]:https://img.shields.io/badge/Godaddy-323330?style=for-the-badge&logo=testing-library&logoColor=yellow
+[Appwrite]:https://img.shields.io/badge/Appwrite-323330?style=for-the-badge&logo=appwrite&logoColor=blue
+[Auth0]:https://img.shields.io/badge/Auth0-325460?style=for-the-badge&logo=auth0&logoColor=green
+[Gits]:https://img.shields.io/badge/Git-FFE5B4?style=for-the-badge&logo=git&logoColor=orange
+[Github]:https://img.shields.io/badge/Github-323330?style=for-the-badge&logo=github&logoColor=red
+[Blockchain]:https://img.shields.io/badge/Blockchain-FF0000?style=for-the-badge&logo=blockchain&logoColor=green
+[Godaddy]:https://img.shields.io/badge/Godaddy-323330?style=for-the-badge&logo=godaddy&logoColor=yellow
